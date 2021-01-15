@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/kerplogo.png";
+import logo from "../../assets/kerplogo.png";
 import Input from "./Input";
 
 const Sidebar = () => {
@@ -8,9 +8,6 @@ const Sidebar = () => {
     <Container>
       <LogoWrapper>
         <img src={logo} alt='' style={{ width: "80%" }} />
-        {/* <h3>
-          Eli <span>Codes</span>
-        </h3> */}
       </LogoWrapper>
       <Form>
         <h3>Welcome</h3>
