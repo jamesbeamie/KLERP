@@ -20,8 +20,8 @@ const Container = styled.div`
   align-items: center;
 
   h1 {
-    font-size: 65px;
-    font-weight: 900;
+    font-size: 45px;
+    font-weight: 400;
     color: #343434;
 
     @media (max-width: 900px) {
