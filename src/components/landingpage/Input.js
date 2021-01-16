@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const Input = ({ type, placeholder }) => {
+const Input = (props) => {
+  const [value, setValue] = useState("");
+  const handleChange = (event) => {
+    setValue(event.target.value);
+    props.onChange(event.target.name, event.target.value);
+  };
   return (
     <Container>
       <StyledInput
-        placeholder={placeholder && placeholder}
-        type={type ? type : "text"}
+        placeholder={props.placeholder && props.placeholder}
+        type={props.type ? props.type : "text"}
         required
         autocomplete='off'
+        onChange={(event) => handleChange(event)}
+        name={props.name}
+        value={props.value ? props.value : value}
       />
       <Status />
     </Container>
