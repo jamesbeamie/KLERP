@@ -8,6 +8,7 @@ import Profile from "./Profile";
 
 const FarmerDashBoard = () => {
   const [modalShow, setModalShow] = useState(false);
+  const [component, setComponent] = useState(1);
   return (
     <React.Fragment>
       <Header />
@@ -27,30 +28,48 @@ const FarmerDashBoard = () => {
                   <p className='description font-dm-sans'>Sikhendu Outgrower</p>
                 </div>
                 <div className='d-flex flex-column '>
-                  <span
-                    href='/profile'
+                  <a
+                    href='#profile'
                     onClick={() => setModalShow(true)}
                     className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
                     Profile
-                  </span>
+                  </a>
                   <a
-                    href='#services'
-                    className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
+                    href='#fields'
+                    onClick={() => setComponent(1)}
+                    className={
+                      component == 1
+                        ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
+                        : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
+                    }
+                    // className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
                     Fields
                   </a>
                   <a
-                    href='#portfolio'
-                    className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
+                    href='#requests'
+                    onClick={() => setComponent(2)}
+                    className={
+                      component == 2
+                        ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
+                        : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
+                    }
+                    // className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
                     Requests
                   </a>
                   <a
-                    href='#footer'
-                    className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
+                    href='#acounts'
+                    onClick={() => setComponent(3)}
+                    className={
+                      component == 3
+                        ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
+                        : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
+                    }
+                    // className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
-                    Account
+                    Accounts
                   </a>
                 </div>
               </nav>
@@ -60,9 +79,15 @@ const FarmerDashBoard = () => {
             className='col-md-9 col-sm-12   px-0'
             style={{ backgroundColor: "#dfecdf" }}
           >
-            {/* <Fields /> */}
-            {/* <Requests /> */}
-            <Accounts />
+            {component == 1 ? (
+              <Fields />
+            ) : component == 2 ? (
+              <Requests />
+            ) : component == 3 ? (
+              <Accounts />
+            ) : (
+              <Fields />
+            )}
             <Profile openProfile={modalShow} />
           </div>
         </div>
