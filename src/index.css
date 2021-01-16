@@ -1,6 +1,6 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap");
-* {
+body {
   margin: 0;
   padding: 0;
   outline: none;
@@ -8,9 +8,83 @@
   font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-transform: capitalize;
 }
-
+h1,
+h3,
+h4 {
+  text-transform: capitalize;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+:root {
+  --color-blue: #0080ff;
+  --color-black: #000000;
+  --color-white: #71c66c;
+  --color-links: #652d1a;
+  --color-links-hover: #e09c85;
+  --color-border: #ffffff34;
+  --font-staat: "Staatliches", cursive;
+  --font-os: "Oswald", sans-serif;
+  --font-ram: "Rambla", sans-serif;
+}
+
+/* global classes */
+.font-staat {
+  font: normal 400 18px var(--font-staat);
+}
+.font-os {
+  font: normal 300 18px var(--font-os);
+}
+.font-ram {
+  font: normal bold 18px var(--font-ram);
+}
+
+.font-size-40 {
+  font-size: 40px;
+}
+.font-size-34 {
+  font-size: 34px;
+}
+.font-size-27 {
+  font-size: 27px;
+}
+.font-size-20 {
+  font-size: 20px;
+}
+.font-size-16 {
+  font-size: 16px;
+}
+
+.bgcolor-black {
+  background-color: var(--color-black);
+}
+.bgcolor-blue {
+  background-color: var(--color-blue);
+}
+.linkcolor-brown {
+  background-color: var(--color-links);
+}
+
+/* #global classes */
+/* #kichwa {
+  letter-spacing: 2px;
+  color: var(--color-white);
+} */
+
+.headerlink {
+  color: #652d1a;
+  margin: 0.7rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-transform: capitalize;
+  color: var(--color-links) !important;
+}
+
+.headerlink:hover {
+  color: var(--color-links-hover) !important;
+}
+
+/* #site-main */
