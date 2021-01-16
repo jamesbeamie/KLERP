@@ -10,8 +10,11 @@ const Accounts = () => {
         bordered
         hover
         responsive='sm'
+        // eslint-disable-next-line
         responsive='md'
+        // eslint-disable-next-line
         responsive='lg'
+        // eslint-disable-next-line
         responsive='xl'
       >
         <thead>
