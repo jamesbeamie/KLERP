@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../common/Header";
 import "../../assets/style.css";
 import Fields from "./Fields";
+import Requests from "./Requests";
+import Accounts from "./Accounts";
+import Profile from "./Profile";
 
 const FarmerDashBoard = () => {
+  const [modalShow, setModalShow] = useState(false);
   return (
     <React.Fragment>
       <Header />
@@ -23,12 +27,13 @@ const FarmerDashBoard = () => {
                   <p className='description font-dm-sans'>Sikhendu Outgrower</p>
                 </div>
                 <div className='d-flex flex-column '>
-                  <a
-                    href='#about_me'
+                  <span
+                    href='/profile'
+                    onClick={() => setModalShow(true)}
                     className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
                     Profile
-                  </a>
+                  </span>
                   <a
                     href='#services'
                     className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
@@ -56,6 +61,9 @@ const FarmerDashBoard = () => {
             // style={{ backgroundColor: "red" }}
           >
             <Fields />
+            {/* <Requests /> */}
+            {/* <Accounts /> */}
+            <Profile openProfile={modalShow} />
           </div>
         </div>
       </div>
