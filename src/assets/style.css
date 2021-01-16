@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 body {
@@ -7,7 +6,6 @@ body {
 }
 
 :root {
-  /* --color-bggreen: #edf8ed; */
   --color-bggreen: #ffffff;
   --color-farmgreen: #71c66c;
 
@@ -57,131 +55,20 @@ body {
   background-color: var(--color-bggreen);
 }
 
-/* #global classes */
-
-/* #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-  transition: left 0.5s ease;
-}
-
-#header nav {
-  height: 100vh;
-}
-#header .site-title .navbar-brand {
-  letter-spacing: 2px;
-  color: var(--color-white);
-} */
 .profile {
-  height: 80vh;
-  border: 1px solid transparent;
-  border-radius: 3px;
+  height: 100%;
 }
 
 .dash-link {
   margin: 0.7rem 1rem;
   border-bottom: 1px solid var(--color-border);
-  /* text-transform: uppercase; */
 }
 
 .dash-link:hover {
   color: var(--color-white) !important;
   text-decoration: none;
 }
-/* 
-#header .toggle-button {
-  background: none;
-  color: var(--color-black);
-  position: fixed;
-  top: 25px;
-  right: 20px;
-  border: 1px solid var(--color-border);
-} */
 
-/* .toggle-left {
-  left: 0 !important;
-  width: 1000px !important;
-}
-
-/* site-main */
-
-/* .site-banner .banner-area {
-  background: url(./assets/blue.jpg) no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-} */
-*/
-/* 
-.site-banner .banner-area .author {
-  margin: 0;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
-/* .blu-btn {
-  background-color: var(--color-blue);
-  color: white;
-}
-.blu-btn:hover {
-  color: black;
-  background-color: #80bfff;
-}
-.blu-btn a {
-  color: white;
-  text-decoration: none;
-}
-.blu-btn a:hover {
-  text-decoration: none;
-  color: black;
-} */
 #mkulima {
   height: 80vh;
 }
-
-/* .site-banner .banner-area .author .author-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: auto;
-  background: url(./assets/2.png) no-repeat;
-  background-size: 200%;
-  background-position: 40% 0;
-} */
-
-/* .skill .bars p,
-.site-content .skill .bars span {
-  line-height: 10px;
-} */
-/* .testimony {
-  padding: 1rem;
-  font: normal 300 18px var(--font-os);
-}
-.testimon {
-  padding: 1rem;
-}
-
-#footer form .row .col input[type="text"],
-#footer form .row .col input[type="email"],
-#footer form textarea {
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid gray;
-  padding: 1.5rem 1rem;
-}
-
-@media screen and (min-width: 768px) {
-  .toggle-button {
-    display: none;
-  }
-  #header {
-    z-index: 0;
-  }
-} */
-
-/* #site-main */
