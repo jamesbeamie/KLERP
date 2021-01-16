@@ -14,11 +14,8 @@ const App = () => {
   console.log(loggedin);
   return (
     <Router>
-      <Switch>
-        {!loggedin && <Route path='/' component={LandingPage} exact />}
-        <Route path='/farmer/dashboard' component={FarmerDashBoard} />
-        {loggedin && <Redirect from='/' to='/farmer/dashboard' exact />}
-      </Switch>
+      <Route path='/' component={LandingPage} exact />
+      <Route path='/farmer/dashboard' component={FarmerDashBoard} />
     </Router>
   );
 };
