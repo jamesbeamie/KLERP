@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import logo from "../../assets/kerplogo.png";
 import Input from "./Input";
 
 const Sidebar = () => {
+  const [userdata, setUserdata] = useState({});
+  const [farmerid, setFarmerid] = useState(2005);
+  const [farmerpwd, setFarmerpwd] = useState("simiyu");
+
+  let history = useHistory();
+  const handleChange = (name, value) => {
+    setUserdata((prev) => ({ ...prev, [name]: value }));
+  };
+  // console.log("userdata", userdata);
+  const handleSubmit = () => {
+    // e.preventDefault();
+    // console.log("userdata ndani", userdata);
+    if (userdata.farmernumber == farmerid && userdata.password == farmerpwd) {
+      console.log("ikooooo");
+      localStorage.setItem("farmerpwd", userdata.password);
+      history.push("/farmer/dashboard");
+    } else {
+      console.log("ikooooo wapi");
+    }
+  };
   return (
     <Container>
       <LogoWrapper>
@@ -11,10 +32,24 @@ const Sidebar = () => {
       </LogoWrapper>
       <Form>
         <h3>Welcome</h3>
-        <Input placeholder='Farmer number' />
-        <Input type='email' placeholder='Email' />
-        <Input type='password' placeholder='Password' />
-        <button>Sign In</button>
+        <Input
+          placeholder='Farmer number'
+          name='farmernumber'
+          onChange={handleChange}
+        />
+        <Input
+          type='email'
+          placeholder='Email'
+          name='email'
+          onChange={handleChange}
+        />
+        <Input
+          type='password'
+          placeholder='Password'
+          name='password'
+          onChange={handleChange}
+        />
+        <button onClick={handleSubmit}>Sign In</button>
       </Form>
       <div>
         <Terms>
