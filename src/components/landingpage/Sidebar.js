@@ -6,7 +6,9 @@ import Input from "./Input";
 
 const Sidebar = () => {
   const [userdata, setUserdata] = useState({});
+  // eslint-disable-next-line
   const [farmerid, setFarmerid] = useState(2005);
+  // eslint-disable-next-line
   const [farmerpwd, setFarmerpwd] = useState("simiyu");
 
   let history = useHistory();
@@ -17,7 +19,7 @@ const Sidebar = () => {
   const handleSubmit = () => {
     // e.preventDefault();
     // console.log("userdata ndani", userdata);
-    if (userdata.farmernumber == farmerid && userdata.password == farmerpwd) {
+    if (userdata.farmernumber === farmerid && userdata.password === farmerpwd) {
       console.log("ikooooo");
       localStorage.setItem("farmerpwd", userdata.password);
       history.push("/farmer/dashboard");
