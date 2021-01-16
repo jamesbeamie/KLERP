@@ -7,7 +7,7 @@ import Accounts from "./Accounts";
 import Profile from "./Profile";
 
 const FarmerDashBoard = () => {
-  const [modalShow, setModalShow] = useState(false);
+  // const [modalShow, setModalShow] = useState(false);
   const [component, setComponent] = useState(1);
   return (
     <React.Fragment>
@@ -18,7 +18,8 @@ const FarmerDashBoard = () => {
           <div className='col-md-3 col-sm-12 px-0 '>
             <div className='bgcolor-farmgreen profile '>
               <nav className='primary-nav navbar-expand-md'>
-                <div className='site-title text-center text-light py-5'>
+                <div className='site-title d-flex flex-column text-center text-light py-3'>
+                  <i class='fa fa-user-circle fa-10x' aria-hidden='true'></i>
                   <a
                     href='#'
                     className='navbar-brand font-dm-sans-thick font-size-40'
@@ -28,13 +29,18 @@ const FarmerDashBoard = () => {
                   <p className='description font-dm-sans'>Sikhendu Outgrower</p>
                 </div>
                 <div className='d-flex flex-column '>
-                  <a
+                  {/* <a
                     href='#profile'
-                    onClick={() => setModalShow(true)}
-                    className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
+                    onClick={() => setComponent(0)}
+                    className={
+                      component == 0
+                        ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
+                        : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
+                    }
+                    // className='nav-item dash-link text-black-50 font-dm-sans font-size-16 active'
                   >
                     Profile
-                  </a>
+                  </a> */}
                   <a
                     href='#fields'
                     onClick={() => setComponent(1)}
@@ -79,7 +85,9 @@ const FarmerDashBoard = () => {
             className='col-md-9 col-sm-12   px-0'
             style={{ backgroundColor: "#dfecdf" }}
           >
-            {component == 1 ? (
+            {component == 0 ? (
+              <Profile />
+            ) : component == 1 ? (
               <Fields />
             ) : component == 2 ? (
               <Requests />
@@ -88,7 +96,6 @@ const FarmerDashBoard = () => {
             ) : (
               <Fields />
             )}
-            <Profile openProfile={modalShow} />
           </div>
         </div>
       </div>
