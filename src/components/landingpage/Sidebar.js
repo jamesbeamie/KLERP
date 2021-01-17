@@ -5,9 +5,11 @@ import logo from "../../assets/kerplogo.png";
 import Input from "./Input";
 
 const Sidebar = () => {
-  const [userdata, setUserdata] = useState({});
+
+
   // eslint-disable-next-line
   const [farmerid, setFarmerid] = useState(2005);
+
   // eslint-disable-next-line
   const [farmerpwd, setFarmerpwd] = useState("simiyu");
 
@@ -19,7 +21,11 @@ const Sidebar = () => {
   const handleSubmit = () => {
     // e.preventDefault();
     // console.log("userdata ndani", userdata);
-    if (userdata.farmernumber === farmerid && userdata.password === farmerpwd) {
+
+
+    // eslint-disable-next-line
+    if (userdata.farmernumber == farmerid && userdata.password == farmerpwd) {
+
       console.log("ikooooo");
       localStorage.setItem("farmerpwd", userdata.password);
       history.push("/farmer/dashboard");

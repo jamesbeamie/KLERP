@@ -19,7 +19,11 @@ const FarmerDashBoard = () => {
             <div className='bgcolor-farmgreen profile '>
               <nav className='primary-nav navbar-expand-md'>
                 <div className='site-title d-flex flex-column text-center text-light py-3'>
-                  <i class='fa fa-user-circle fa-10x' aria-hidden='true'></i>
+
+                  <i
+                    className='fa fa-user-circle fa-10x'
+                    aria-hidden='true'
+                  ></i>
 
                   <a
                     href='#simiyu'

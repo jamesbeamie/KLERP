@@ -9,6 +9,7 @@ const Accounts = () => {
         striped
         bordered
         hover
+        // eslint-disable-next-line
         responsive='sm'
         // eslint-disable-next-line
         responsive='md'
