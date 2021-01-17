@@ -19,10 +19,12 @@ const FarmerDashBoard = () => {
             <div className='bgcolor-farmgreen profile '>
               <nav className='primary-nav navbar-expand-md'>
                 <div className='site-title d-flex flex-column text-center text-light py-3'>
+
                   <i
                     className='fa fa-user-circle fa-10x'
                     aria-hidden='true'
                   ></i>
+
                   <a
                     href='#simiyu'
                     className='navbar-brand font-dm-sans-thick font-size-40'
@@ -36,7 +38,7 @@ const FarmerDashBoard = () => {
                     href='#profile'
                     onClick={() => setComponent(0)}
                     className={
-                      component == 0
+                      component === 0
                         ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
                         : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
                     }

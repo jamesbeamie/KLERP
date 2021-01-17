@@ -5,7 +5,7 @@ import logo from "../../assets/kerplogo.png";
 import Input from "./Input";
 
 const Sidebar = () => {
-  const [userdata, setUserdata] = useState({});
+
 
   // eslint-disable-next-line
   const [farmerid, setFarmerid] = useState(2005);
@@ -22,8 +22,10 @@ const Sidebar = () => {
     // e.preventDefault();
     // console.log("userdata ndani", userdata);
 
+
     // eslint-disable-next-line
     if (userdata.farmernumber == farmerid && userdata.password == farmerpwd) {
+
       console.log("ikooooo");
       localStorage.setItem("farmerpwd", userdata.password);
       history.push("/farmer/dashboard");

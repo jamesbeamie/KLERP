@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 const Input = (props) => {
+  // eslint-disable-next-line
   const [value, setValue] = useState("");
   const handleChange = (event) => {
     setValue(event.target.value);
