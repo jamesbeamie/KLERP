@@ -19,9 +19,12 @@ const FarmerDashBoard = () => {
             <div className='bgcolor-farmgreen profile '>
               <nav className='primary-nav navbar-expand-md'>
                 <div className='site-title d-flex flex-column text-center text-light py-3'>
-                  <i class='fa fa-user-circle fa-10x' aria-hidden='true'></i>
+                  <i
+                    className='fa fa-user-circle fa-10x'
+                    aria-hidden='true'
+                  ></i>
                   <a
-                    href='#'
+                    href='#simiyu'
                     className='navbar-brand font-dm-sans-thick font-size-40'
                   >
                     Simiyu
@@ -45,7 +48,7 @@ const FarmerDashBoard = () => {
                     href='#fields'
                     onClick={() => setComponent(1)}
                     className={
-                      component == 1
+                      component === 1
                         ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
                         : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
                     }
@@ -57,7 +60,7 @@ const FarmerDashBoard = () => {
                     href='#requests'
                     onClick={() => setComponent(2)}
                     className={
-                      component == 2
+                      component === 2
                         ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
                         : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
                     }
@@ -69,7 +72,7 @@ const FarmerDashBoard = () => {
                     href='#acounts'
                     onClick={() => setComponent(3)}
                     className={
-                      component == 3
+                      component === 3
                         ? "nav-item dash-link-active  text-black-50 font-dm-sans font-size-16 active"
                         : "nav-item dash-link text-black-50 font-dm-sans font-size-16 active"
                     }
@@ -85,13 +88,13 @@ const FarmerDashBoard = () => {
             className='col-md-9 col-sm-12   px-0'
             style={{ backgroundColor: "#dfecdf" }}
           >
-            {component == 0 ? (
+            {component === 0 ? (
               <Profile />
-            ) : component == 1 ? (
+            ) : component === 1 ? (
               <Fields />
-            ) : component == 2 ? (
+            ) : component === 2 ? (
               <Requests />
-            ) : component == 3 ? (
+            ) : component === 3 ? (
               <Accounts />
             ) : (
               <Fields />
